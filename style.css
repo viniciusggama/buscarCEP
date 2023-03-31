@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300&family=Righteous&display=swap');
+
+
+#conteudo{
+    width: 350px;
+    height: 315px;
+    background-color: rgba(167, 115, 236, 0.61);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 3px 3px 7px  rgba(0, 0, 0, 0.555);
+    border: 2px solid black;
+}
+
+#titulo{
+    text-align: center;
+    font-family: 'Manrope', sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+#formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 5px;
+}
+
+#CEP{
+    width: 80px;
+}
+
+input{
+    border: none;
+    border-radius: 5px;
+    height: 25px;
+}
+
+#div_btn{
+    text-align: center;
+}
+
+#btn{
+    width: 110px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 40%;
+    font-family: 'Manrope', sans-serif;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+#btn:hover{
+    background-color: black;
+    color: white;
+}
+
+img{
+    position: fixed;
+    width: 300px;
+    top: 35%;
+    left: 35%;
+
+
+}
