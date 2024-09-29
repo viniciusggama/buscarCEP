@@ -6,8 +6,7 @@ cep.addEventListener("blur", (e) => {
 
     fetch(`https://viacep.com.br/ws/${search}/json/`, options)
         .then(response => response.json())
-        .then(data => exibirResultado(data))
-        ;
+        .then(data => exibirResultado(data));
 });
 
 const exibirResultado = (result) => {
@@ -35,8 +34,10 @@ $(document).ready(function () {
                     const endereco = `${data.logradouro}, ${data.bairro}, ${data.localidade}, ${data.uf}`;
                     buscarCoordenadas(endereco);
                 } else {
-                    $('#resultado').html('<div class="alert alert-danger">CEP não encontrado.</div>');
+                    $('#resultado').html('<div class="alert alert-danger">CEP inválido.</div>');
                 }
+            }).fail(function() {
+                $('#resultado').html('<div class="alert alert-danger">Erro ao buscar o CEP. Tente novamente.</div>');
             });
         } else {
             $('#resultado').html('<div class="alert alert-warning">Por favor, insira um CEP válido.</div>');
