@@ -7,7 +7,7 @@ cep.addEventListener("blur", (e) => {
     fetch(`https://viacep.com.br/ws/${search}/json/`, options)
         .then(response => response.json())
         .then(data => exibirResultado(data))
-        .catch(e => alert('VOCÊ DIGITOU UM [CEP INVALIDO]'));
+        ;
 });
 
 const exibirResultado = (result) => {
